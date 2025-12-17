@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex gap-6">
             <a
-              href="https://github.com/tharuneswar"
+              href="https://github.com/Tharuneswar2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -18,7 +18,7 @@ const Footer = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com/in/tharuneswar"
+              href="https://linkedin.com/in/tharuneswar-doddi/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"

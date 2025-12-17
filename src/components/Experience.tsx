@@ -1,30 +1,32 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Briefcase, Calendar } from 'lucide-react';
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    role: "Python Backend Developer Intern",
+    role: "AI-ML Full Stack Developer",
     company: "Criativo Software Solutions Pvt Ltd",
     period: "August 2024 – Present",
-    description: "Developed and managed backend components for web applications using Python and FastAPI framework. Solved complex problems by identifying and fixing issues in the code, improving overall application functionality.",
+    description:
+      "Developed and managed backend components for web applications using Python and FastAPI framework. Solved complex problems by identifying and fixing issues in the code, improving overall application functionality.",
     achievements: [
       "Built scalable REST APIs using FastAPI",
       "Optimized backend performance and response times",
-      "Implemented automated testing and debugging solutions"
-    ]
+      "Implemented automated testing and debugging solutions",
+    ],
   },
   {
     role: "AI & ML Intern",
     company: "ULearn",
     period: "May 2024 – July 2024",
-    description: "Completed comprehensive AI & ML training using Python, achieving an A+ grade. Gained hands-on experience in machine learning concepts, algorithms, and Python-based AI development.",
+    description:
+      "Completed comprehensive AI & ML training using Python, achieving an A+ grade. Gained hands-on experience in machine learning concepts, algorithms, and Python-based AI development.",
     achievements: [
       "Developed multiple AI/ML projects with real-world applications",
       "Mastered machine learning algorithms and model design",
-      "Achieved A+ grade for outstanding performance"
-    ]
-  }
+      "Achieved A+ grade for outstanding performance",
+    ],
+  },
 ];
 
 const Experience = () => {
@@ -82,7 +84,9 @@ const Experience = () => {
                     {exp.achievements.map((achievement, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <span className="text-primary mt-1">▸</span>
-                        <span className="text-sm text-muted-foreground">{achievement}</span>
+                        <span className="text-sm text-muted-foreground">
+                          {achievement}
+                        </span>
                       </div>
                     ))}
                   </div>

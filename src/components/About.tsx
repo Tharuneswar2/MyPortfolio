@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +12,7 @@ const About = () => {
   useEffect(() => {
     if (sectionRef.current) {
       gsap.fromTo(
-        sectionRef.current.querySelectorAll('.about-text'),
+        sectionRef.current.querySelectorAll(".about-text"),
         { opacity: 0, y: 50 },
         {
           opacity: 1,
@@ -21,10 +21,10 @@ const About = () => {
           stagger: 0.2,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-          }
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }
@@ -35,9 +35,9 @@ const About = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -45,8 +45,8 @@ const About = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6 }
-    }
+      transition: { duration: 0.6 },
+    },
   };
 
   return (
@@ -74,27 +74,37 @@ const About = () => {
             <motion.div variants={itemVariants} className="about-text">
               <h3 className="text-2xl font-bold mb-4 text-primary">Who I Am</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate Python Backend Developer and AI/ML enthusiast currently pursuing my MCA at Aditya PG College. 
-                With hands-on experience in building scalable backend systems and intelligent applications, I specialize in 
-                FastAPI, AI model integration, and cloud deployments.
+                I'm a passionate Python Backend Developer and AI/ML enthusiast
+                currently pursuing my MCA at Aditya PG College. With hands-on
+                experience in building scalable backend systems and intelligent
+                applications, I specialize in FastAPI, AI model integration, and
+                cloud deployments.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="about-text">
-              <h3 className="text-2xl font-bold mb-4 text-primary">What I Do</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary">
+                What I Do
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I develop robust backend solutions using Python and FastAPI, create AI-powered applications with machine 
-                learning models, and deploy scalable systems using Docker and Kubernetes. My expertise spans from building 
-                RAG agents to implementing face recognition systems and automated workflows.
+                I develop robust backend solutions using Python and FastAPI,
+                create AI-powered applications with machine learning models, and
+                deploy scalable systems using Docker and Kubernetes. My
+                expertise spans from building RAG agents to implementing face
+                recognition systems and automated workflows.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="about-text">
-              <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary">
+                My Journey
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Currently interning at Criativo Software Solutions as a Python Backend Developer, I've worked on multiple 
-                projects involving computer vision, natural language processing, and full-stack development. I won 1st place 
-                in Robo-Race 2k23 and completed an AI/ML internship with an A+ grade at ULearn.
+                Currently interning at Criativo Software Solutions as a Python
+                Backend Developer, I've worked on multiple projects involving
+                computer vision, natural language processing, and full-stack
+                development. I won 1st place in Robo-Race 2k23 and completed an
+                AI/ML internship with an A+ grade at ULearn.
               </p>
             </motion.div>
           </motion.div>
@@ -107,7 +117,7 @@ const About = () => {
           >
             <div className="glass-card p-8 rounded-2xl relative overflow-hidden group hover:shadow-2xl transition-all duration-300">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
+
               <div className="relative z-10 space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
@@ -125,7 +135,9 @@ const About = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Experience</h4>
-                    <p className="text-sm text-muted-foreground">Backend Developer Intern</p>
+                    <p className="text-sm text-muted-foreground">
+                      AI-Full Stack Developer
+                    </p>
                   </div>
                 </div>
 
@@ -135,7 +147,9 @@ const About = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Location</h4>
-                    <p className="text-sm text-muted-foreground">Kakinada, India</p>
+                    <p className="text-sm text-muted-foreground">
+                      Kakinada, India
+                    </p>
                   </div>
                 </div>
 
@@ -145,7 +159,9 @@ const About = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Contact</h4>
-                    <p className="text-sm text-muted-foreground">tharuneswardoddi@gmail.com</p>
+                    <p className="text-sm text-muted-foreground">
+                      tharuneswardoddi@gmail.com
+                    </p>
                   </div>
                 </div>
               </div>

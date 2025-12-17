@@ -1,9 +1,9 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
-import { TypeAnimation } from 'react-type-animation';
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Code2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail, Code2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const AnimatedSphere = () => {
   return (
@@ -23,11 +23,14 @@ const AnimatedSphere = () => {
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="home">
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="home"
+    >
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 5] }}>
@@ -56,7 +59,9 @@ const Hero = () => {
             className="inline-block mb-6"
           >
             <div className="px-6 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
-              <span className="text-primary font-medium">👋 Welcome to my portfolio</span>
+              <span className="text-primary font-medium">
+                👋 Welcome to my portfolio
+              </span>
             </div>
           </motion.div>
 
@@ -68,13 +73,13 @@ const Hero = () => {
           <div className="text-2xl md:text-3xl lg:text-4xl mb-8 h-20 flex items-center justify-center">
             <TypeAnimation
               sequence={[
-                'Python Backend Developer',
+                "Python Backend Developer",
                 2000,
-                'AI & ML Enthusiast',
+                "AI & ML Enthusiast",
                 2000,
-                'Problem Solver',
+                "Problem Solver",
                 2000,
-                'Full-Stack Developer',
+                "Full-Stack Developer",
                 2000,
               ]}
               wrapper="span"
@@ -90,8 +95,9 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
           >
-            Building intelligent solutions with Python, AI/ML, and modern web technologies.
-            Currently pursuing MCA and working as a Backend Developer Intern.
+            Building intelligent solutions with Python, AI/ML, and modern web
+            technologies. Currently pursuing MCA and working as a AI-Full Stack
+            Developer.
           </motion.p>
 
           <motion.div
@@ -102,7 +108,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect"
             >
               <Mail className="mr-2 h-5 w-5" />
@@ -111,7 +117,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection("projects")}
               className="border-primary/30 hover:bg-primary/10"
             >
               <Code2 className="mr-2 h-5 w-5" />
@@ -126,7 +132,7 @@ const Hero = () => {
             className="flex gap-6 justify-center"
           >
             <a
-              href="https://github.com/tharuneswar"
+              href="https://github.com/Tharuneswar2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -134,7 +140,7 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com/in/tharuneswar"
+              href="https://linkedin.com/in/tharuneswar-doddi/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -161,7 +167,7 @@ const Hero = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
             className="cursor-pointer"
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection("about")}
           >
             <ArrowDown className="h-6 w-6 text-primary" />
           </motion.div>
